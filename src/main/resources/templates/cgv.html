@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{ _layout :: header( ~{::title}, _, _) }">
+    <title>CGV</title>
+</head>
+<body>
+
+    <h1><i class="fa-solid fa-house"></i>Conditions générales de vente</h1>
+    
+    <nav th:replace="~{ _layout::menu }"></nav>
+
+    <div class="row">
+        <div class="col-4" th:each=" i : ${#numbers.sequence( 1, 20 )}">
+            <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <span th:text="${i}"></span>
+                <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+              </div>
+    </div>
+</body>
+</html>
